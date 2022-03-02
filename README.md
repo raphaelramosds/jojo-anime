@@ -1,3 +1,3 @@
-# Episódios de JoJo Battle Tendency
+# Episódios de JoJo
 
 ![](carbon.png)
