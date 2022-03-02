@@ -31,7 +31,7 @@ data["duration"] = []
 
 # Percorra cada página
 
-for j in range(20):
+for j in range(3):
 
   print(f"[ EP ] {j}")
   # Espere ela carregar
@@ -46,10 +46,10 @@ for j in range(20):
 
   # Armazenar dados
   data["title"].append(title.text)
-  data["season"].append(season.text)
-  data["ep_number"].append(ep_number.text)
-  data["rate"].append(rate.text)
-  data["duration"].append(duration.text)
+  data["season"].append(handling.extract_number(season.text, "S"))
+  data["ep_number"].append(handling.extract_number(ep_number.text, "E"))
+  data["rate"].append(handling.convert_to_dot(rate.text))
+  data["duration"].append(handling.extract_minutes(duration.text))
 
   # Clique na seta da direita
   right_btn = browser.find_element_by_id("iconContext-arrow-right")
