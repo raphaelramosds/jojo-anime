@@ -1,4 +1,13 @@
+# Sistema
 import time
+import sys
+
+sys.path.append("/jojo-dataset/modules")
+
+# Módulos adicionais
+from modules import handling
+
+# Webscraping
 from selenium import webdriver
 
 # Ir até o site
