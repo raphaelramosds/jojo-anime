@@ -4,7 +4,7 @@
 
 ### Regras de Negócio
 
-O arquivo `handling.py` tratará os dados da seguinte maneira
+O arquivo *handling.py* tratará os dados da seguinte maneira
 
 `7,4 should be 7.4` A representação de números decimais deve ser com ponto e não com vírgula
 
