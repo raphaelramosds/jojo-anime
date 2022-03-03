@@ -2,10 +2,12 @@
 import time
 import sys
 
+# Adicionar módulos adicionais
 sys.path.append("/jojo-dataset/modules")
 
 # Módulos adicionais
 from modules import handling
+import pandas as pd
 
 # Webscraping
 from selenium import webdriver
@@ -15,7 +17,7 @@ browser = webdriver.Chrome()
 browser.get("https://www.imdb.com/title/tt3277342/?ref_=tt_ep_pr")
 
 # O anime JoJo Bizarre's Adventure tem 152 episodios
-episodes = 151
+episodes = 163
 
 # Prefixo de cada elemento de interesse
 prefix = "#__next > main > div > section.ipc-page-background.ipc-page-background--base.MainDetailPageLayout__StyledPageBackground-sc-13rp3wh-0.hsughJ > section > div:nth-child(4) > section > section"
@@ -31,11 +33,13 @@ data["duration"] = []
 
 # Percorra cada página
 
-for j in range(3):
+for j in range(episodes):
 
+  # Log
   print(f"[ EP ] {j}")
+
   # Espere ela carregar
-  time.sleep(1)
+  time.sleep(2)
 
   # Recupere os dados
   title = browser.find_element_by_css_selector("h1[data-testid='hero-title-block__title']")
@@ -55,6 +59,10 @@ for j in range(3):
   right_btn = browser.find_element_by_id("iconContext-arrow-right")
   right_btn.click()
 
-print(data)
-
+# Fechar navegador
 browser.close()
+
+# Exportar dataframe
+table = pd.DataFrame(data)
+
+table.to_csv("jojo-dataset-csv.csv", index=False)
