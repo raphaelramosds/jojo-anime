@@ -32,7 +32,6 @@ data["rate"] = []
 data["duration"] = []
 
 # Percorra cada página
-
 for j in range(episodes):
 
   # Log
