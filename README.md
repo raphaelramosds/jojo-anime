@@ -1,6 +1,6 @@
 # Episódios de JoJo
 
-![](carbon.png)
+![](./assets/carbon.png)
 
 ### Regras de Negócio
 
