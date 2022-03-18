@@ -1,8 +1,14 @@
 # Episódios de JoJo
 
+A ideia foi criar um script em Python que vá até o site do [IMDb](https://www.imdb.com/), recuperar informações de todos os episódios de JoJo Bizarre's Adventures, exportá-los em um dataset e fazer uma análise de dados com ele. 
+
+### Webscraping
+
+Obteu-se a seguinte amostra de dados com o webscraping
+
 ![](./assets/carbon.png)
 
-### Regras de Negócio
+Seguiu-se as seguintes regras de negócio
 
 `7,4 should be 7.4` a representação de números decimais deve ser com ponto e não com vírgula
 
